@@ -25,6 +25,9 @@ body {
   font-family: var(--font-inter);
   position: relative;
   min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Z-index hierarchy */
@@ -47,12 +50,17 @@ main {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-
-  .nav-link-hover {
-    @apply text-sky-400;
-    text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
-  }
 }
+
+/* Remove or replace the existing nav-link-hover utility */
+/* @layer utilities {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  Remove the nav-link-hover class since we're using direct hover styles
+} */
 
 /* Add smooth scrolling to the whole page */
 html {
@@ -61,7 +69,40 @@ html {
 
 /* Optional: Add text shadow for neon effect */
 .text-glow {
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
-               0 0 20px rgba(0, 255, 255, 0.3),
-               0 0 30px rgba(0, 255, 255, 0.1);
+  text-shadow: 
+    0 0 20px rgba(135, 112, 103, 0.7),
+    0 0 35px rgba(135, 112, 103, 0.5),
+    0 0 50px rgba(135, 112, 103, 0.3);
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 20px rgba(135, 112, 103, 0.7),
+      0 0 35px rgba(135, 112, 103, 0.5),
+      0 0 50px rgba(135, 112, 103, 0.3);
+  }
+  to {
+    text-shadow: 
+      0 0 30px rgba(135, 112, 103, 0.9),
+      0 0 45px rgba(135, 112, 103, 0.7),
+      0 0 60px rgba(135, 112, 103, 0.5);
+  }
+}
+
+.nav-glow {
+  transition: all 0.3s ease;
+}
+
+.nav-glow:hover {
+  color: #877067;
+  text-shadow: 0 0 10px rgba(135, 112, 103, 0.5),
+               0 0 20px rgba(135, 112, 103, 0.3),
+               0 0 30px rgba(135, 112, 103, 0.1);
+}
+
+/* Add after existing styles */
+.font-space-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
 }

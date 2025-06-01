@@ -4,6 +4,7 @@ import { Syne } from "next/font/google";
 import "./globals.css";
 import Background from "@/background";
 import Navbar from "@/Navbar";
+import HeroSection from "@/HeroSection";
 
 // Replace Geist with Inter since Geist is having issues
 const inter = Inter({
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${syne.variable} relative min-h-screen`}>
         <Background />
         <Navbar />
+        <HeroSection />
         <main className="relative z-10 pt-16">
           {children}
         </main>

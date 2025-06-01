@@ -31,10 +31,10 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="relative px-3 py-2 text-gray-300 transition-all duration-300 text-lg font-medium hover:nav-link-hover"
+                  className="relative px-3 py-2 text-gray-300 transition-all duration-300 text-lg font-medium hover:text-[#877067] group nav-glow"
                 >
                   {item.name}
-                  <span className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-sky-400/70 transform scale-x-0 origin-left transition-transform group-hover:scale-x-100 duration-300" />
+                  <span className="absolute inset-x-0 -bottom-0.5 h-0.5 bg-[#877067] transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 group-hover:shadow-[0_0_10px_#877067,0_0_20px_#877067]" />
                 </Link>
               ))}
             </div>
@@ -44,7 +44,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-purple-500/20 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 nav-glow hover:text-[#877067] hover:bg-[#877067]/10 focus:outline-none transition-all duration-300"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -72,7 +72,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="block w-full px-3 py-2 text-gray-300 text-center text-xl font-medium hover:nav-link-hover"
+              className="block w-full px-3 py-2 text-gray-300 text-center text-xl font-medium transition-colors duration-300 hover:text-[#877067] nav-glow"
             >
               {item.name}
             </Link>
