@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Syne } from "next/font/google";
 import "./globals.css";
 import Background from "@/background";
+import Navbar from "@/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["700"], // You can add more weights if needed: ['400', '500', '700', '800']
 });
 
 export const metadata: Metadata = {
@@ -25,11 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${syne.className} relative min-h-screen`}>
         <Background />
-        {children}
+        <Navbar />
+        <main className="relative z-10 pt-16">
+          {children}
+        </main>
       </body>
     </html>
   );

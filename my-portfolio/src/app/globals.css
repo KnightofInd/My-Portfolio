@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -20,15 +20,48 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   min-height: 100vh;
 }
 
-/* Ensure content appears above background */
+/* Z-index hierarchy */
+.background-wrapper {
+  z-index: 0;
+}
+
 main {
   position: relative;
-  z-index: 1;
+  z-index: 10;
+}
+
+.navbar {
+  z-index: 50;
+}
+
+/* Navigation effects */
+@layer utilities {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav-link-hover {
+    @apply text-sky-400;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+  }
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add text shadow for neon effect */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+               0 0 20px rgba(0, 255, 255, 0.3),
+               0 0 30px rgba(0, 255, 255, 0.1);
 }
