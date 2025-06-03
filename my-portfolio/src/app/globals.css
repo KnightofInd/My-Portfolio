@@ -106,3 +106,32 @@ html {
 .font-space-grotesk {
   font-family: 'Space Grotesk', sans-serif;
 }
+/* Add these styles to your globals.css */
+.slick-slider {
+  height: 100%;
+}
+
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+
+/* Fade animation enhancement */
+.slick-fade .slick-slide {
+  opacity: 0;
+  transition: opacity 1000ms ease;
+}
+
+.slick-fade .slick-slide.slick-active {
+  opacity: 1;
+}
+
+/* Remove any unwanted elements */
+.slick-dots,
+.slick-arrow {
+  display: none !important;
+}

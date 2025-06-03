@@ -5,6 +5,8 @@ import "./globals.css";
 import Background from "@/background";
 import Navbar from "@/Navbar";
 import HeroSection from "@/HeroSection";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // Replace Geist with Inter since Geist is having issues
 const inter = Inter({
