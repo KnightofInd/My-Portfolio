@@ -7,6 +7,7 @@ import Navbar from "@/Navbar";
 import HeroSection from "@/HeroSection";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import AboutMe from "@/AboutMe";
 
 // Replace Geist with Inter since Geist is having issues
 const inter = Inter({
@@ -36,6 +37,8 @@ export default function RootLayout({
         <Background />
         <Navbar />
         <HeroSection />
+        <AboutMe />
+
         <main className="relative z-10 pt-16">
           {children}
         </main>
