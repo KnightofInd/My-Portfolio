@@ -13,21 +13,47 @@ const AboutMe: FC = () => {
     }
   };
 
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (custom: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.5, 
+        delay: custom * 0.2,
+        ease: "easeOut"
+      }
+    })
+  };
+
+  const highlightVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.3, ease: "backOut" }
+    }
+  };
+
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-syne mb-4 bg-gradient-to-r from-white via-[#877067] to-white text-transparent bg-clip-text">
+          <h2 className="text-4xl md:text-5xl font-bold font-syne mb-4 bg-gradient-to-r from-white via-[#877067] to-white text-transparent bg-clip-text hover:bg-gradient-to-l transition-all duration-500">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-[#877067] mx-auto rounded-full"></div>
+          <motion.div 
+            className="w-24 h-1 bg-[#877067] mx-auto rounded-full"
+            whileInView={{ width: "6rem" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
         </motion.div>
 
         {/* Main Content */}
@@ -41,21 +67,40 @@ const AboutMe: FC = () => {
             className="text-center mb-16"
           >
             <motion.p 
-              variants={cardVariants}
-              className="text-gray-300 text-lg leading-relaxed"
+              variants={textVariants}
+              custom={1}
+              className="text-gray-300 text-lg leading-relaxed space-y-4"
             >
-              I'm a passionate Full Stack Developer and Data Scientist with a keen interest in automotive technology. 
-              With expertise in both frontend and backend development, I create seamless digital experiences while 
-              leveraging data science to solve complex problems.
+              I'm a <span className="font-bold text-white">full-stack developer</span> and <span className="font-bold text-white">data analyst</span> with a passion for building and tuning—whether it's engines or applications. 
+              <motion.span 
+                variants={textVariants}
+                custom={2}
+                className="block mt-4"
+              >
+                I enjoy turning ideas into working systems using tools like <span className="font-bold text-white">React</span>, <span className="font-bold text-white">Node.js</span>, <span className="font-bold text-white">Python</span>, and <span className="font-bold text-white">SQL</span>.
+              </motion.span>
+              <motion.span 
+                variants={textVariants}
+                custom={3}
+                className="block mt-4"
+              >
+                Just like fine-tuning a car for better performance, I optimize code and data to run <span className="font-bold text-white">smoother</span>, <span className="font-bold text-white">faster</span>, and <span className="font-bold text-white">smarter</span>.
+              </motion.span>
             </motion.p>
           </motion.div>
 
-          {/* Stats Cards */}
+          {/* Stats Cards with enhanced animations */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { 
+                opacity: 1,
+                transition: { staggerChildren: 0.2 }
+              }
+            }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
             className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
           >
             { [
@@ -84,14 +129,31 @@ const AboutMe: FC = () => {
             ))}
           </motion.div>
 
-          {/* Hackathon Achievements */}
-          <div className="mt-8">
-            <h3 className="text-2xl font-syne font-bold text-[#877067] mb-8 text-center">
+          {/* Hackathon Achievements with enhanced animations */}
+          <motion.div 
+            className="mt-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.h3 
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true }}
+              className="text-2xl font-syne font-bold text-[#877067] mb-8 text-center"
+            >
               Major Hackathon Victories
-            </h3>
+            </motion.h3>
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 gap-6"
-              variants={cardVariants}
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { 
+                  opacity: 1,
+                  transition: { staggerChildren: 0.15 }
+                }
+              }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -129,7 +191,7 @@ const AboutMe: FC = () => {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
