@@ -1,56 +1,58 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
+import type { Settings } from 'react-slick';
+
+const roles = [
+  'Data Scientist',
+  'Auto Geek',
+  'Full Stack Developer',
+];
+const images = [
+  '/profile.jpg',
+  '/profile2.jpg',
+  '/profile3.jpg',
+];
+const ANIMATION_DURATION = 2000;
 
 export default function HeroSection() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef<Slider | null>(null);
 
-  // Define animation duration constant to keep timing consistent
-  const ANIMATION_DURATION = 2000;
+  // Advance both image and text together
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const nextIndex = (prev + 1) % roles.length;
+        sliderRef.current?.slickGoTo(nextIndex);
+        return nextIndex;
+      });
+    }, ANIMATION_DURATION);
+    return () => clearInterval(interval);
+  }, []);
 
-  const settings = {
+  const settings: Settings = {
     dots: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: ANIMATION_DURATION, // Match TypeAnimation duration
+    autoplay: false,
     fade: true,
     arrows: false,
     pauseOnHover: false,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    initialSlide: 0,
   };
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   return (
     <div className="relative min-h-[100vh] w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-black/80 via-gray-900/60 to-black/80">
       {/* Background with enhanced parallax effect */}
-      <div className="absolute inset-0 z-0">
-        <motion.div 
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1.2 }}
-          transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
-          className="relative w-full h-full"
-        >
-          <Image
-            src="/cityscapes.jpg"
-            alt="Futuristic Cityscape"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-        </motion.div>
-      </div>
+      <div className="absolute inset-0 z-0"></div>
 
       {/* Content Container with Glass Effect */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,8 +64,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2 h-[400px] sm:h-[500px] lg:h-[750px] relative"
           >
-            <Slider {...settings} className="h-full">
-              {['/profile.jpg', '/profile2.jpg', '/profile3.jpg'].map((src, index) => (
+            <Slider ref={sliderRef} {...settings}>
+              {images.map((src, index) => (
                 <div key={index} className="relative h-[400px] sm:h-[500px] lg:h-[750px]">
                   <Image
                     src={src}
@@ -73,7 +75,6 @@ export default function HeroSection() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                     priority={index === 0}
                   />
-                  {/* Gradient overlays */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/30 to-black/80" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 </div>
@@ -96,21 +97,19 @@ export default function HeroSection() {
               <span className="text-glow">Rohan Sharma</span>
             </h1>
             
-            <div className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-300 font-space-grotesk">
+            <div className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-300 font-space-grotesk min-h-[2.5em]">
               <TypeAnimation
+                key={currentIndex} // force re-render for each role
                 sequence={[
-                  'Data Scientist',
-                  ANIMATION_DURATION, // Use the same duration constant
-                  'Auto Geek',
-                  ANIMATION_DURATION,
-                  'Full Stack Developer',
-                  ANIMATION_DURATION,
+                  roles[currentIndex],
+                  ANIMATION_DURATION - 200, // leave a little time for fade
                 ]}
                 wrapper="span"
                 speed={50}
-                repeat={Infinity}
+                repeat={0}
                 className="bg-gradient-to-r from-[#877067] to-white text-transparent bg-clip-text font-bold"
               />
+              <span className="animate-pulse text-[#877067] ml-1 align-middle">|</span>
             </div>
 
             <motion.div 
