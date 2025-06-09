@@ -26,15 +26,6 @@ const AboutMe: FC = () => {
     })
   };
 
-  const highlightVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      transition: { duration: 0.3, ease: "backOut" }
-    }
-  };
-
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +62,7 @@ const AboutMe: FC = () => {
               custom={1}
               className="text-gray-300 text-lg leading-relaxed space-y-4"
             >
-              I'm a <span className="font-bold text-white">full-stack developer</span> and <span className="font-bold text-white">data analyst</span> with a passion for building and tuning—whether it's engines or applications. 
+              I'm a <span className="font-bold text-white">full-stack developer</span> and <span className="font-bold text-white">data analyst</span> with a passion for building and tuning&mdash;whether it's engines or applications. 
               <motion.span 
                 variants={textVariants}
                 custom={2}
