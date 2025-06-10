@@ -1,11 +1,13 @@
 import HeroSection from "@/components/HeroSection";
+import AboutMe from "@/components/AboutMe";
 import TechnicalSkills from "@/components/TechnicalSkills";
 import FeaturedProjects from "@/components/FeaturedProjects";
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto">
       <HeroSection />
+      <AboutMe />
       <TechnicalSkills />
       <FeaturedProjects />
     </div>
