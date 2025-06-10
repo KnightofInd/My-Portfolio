@@ -24,55 +24,48 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Background Image with Parallax */}
-      <div 
-        ref={backgroundRef}
-        className="absolute inset-0 z-0"
-      >
+      <div ref={backgroundRef} className="absolute inset-0 z-0">
         <Image
-          src="/cityscape.jpg" // Add your cityscape image
+          src="/cityscape.jpg"
           alt="Futuristic Cityscape"
           fill
           className="object-cover"
           priority
         />
-        {/* Glassmorphism Overlay */}
         <div className="absolute inset-0 bg-navy-900/60 backdrop-blur-sm" />
       </div>
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 z-10">
-        <div className="particles-container">
-          {/* Add particle effects here */}
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Image */}
-          <div className="hidden lg:flex justify-center">
-            <div className="relative w-64 h-64">
-              <div className="absolute inset-0 rounded-full bg-blue-500 blur-md opacity-50 animate-pulse" />
+      {/* Content with new layout */}
+      <div className="relative z-20 flex items-center min-h-screen">
+        {/* Profile Section - Now relative instead of fixed */}
+        <div className="hidden lg:block relative w-1/2 h-screen">
+          <div className="sticky top-0 h-screen w-full">
+            <div className="relative w-full h-full">
               <Image
-                src="/profile.jpg" // Add your profile image
+                src="/profile.jpg"
                 alt="Profile"
-                width={256}
-                height={256}
-                className="relative rounded-full object-cover border-2 border-blue-500"
+                fill
+                className="object-cover"
+                priority
               />
+              {/* Gradient overlays for better blending */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#877067]/40 via-transparent to-[#877067]/20" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#877067] opacity-90" />
             </div>
           </div>
+        </div>
 
-          {/* Text Content */}
-          <div className="text-center lg:text-left">
+        {/* Content Section */}
+        <div className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-12 bg-gradient-to-l from-transparent via-[#877067]/10 to-[#877067]/20">
+          <div className="max-w-2xl mx-auto lg:mr-0">
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6
-                         [text-shadow:_0_0_30px_rgb(0_0_128_/_0.5)]">
+                         [text-shadow:_0_0_30px_rgba(135,112,103,0.5)]">
               From Neural Nets to Engine Sets —
               <br />
               I Engineer Intelligence
             </h1>
             
-            <div className="text-xl md:text-2xl text-gray-300 font-space-grotesk mb-8">
+            <div className="text-xl md:text-2xl text-[#e2d5d1] font-space-grotesk mb-8">
               <TypeAnimation
                 sequence={[
                   'Data Scientist',
@@ -86,27 +79,33 @@ const HeroSection = () => {
                 repeat={Infinity}
                 cursor={true}
               />
-              <p className="mt-4 opacity-80">
+              <p className="mt-4 opacity-90">
                 Bridging the gap between AI innovation and automotive excellence
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-6">
               <Link
                 href="/projects"
-                className="px-8 py-3 rounded-full border-2 border-blue-500 text-white
-                         bg-transparent hover:bg-blue-500/20 transition-all duration-300
-                         [box-shadow:_0_0_20px_rgb(0_0_255_/_0.3)]
-                         hover:[box-shadow:_0_0_30px_rgb(0_0_255_/_0.5)]"
+                className="px-8 py-3 rounded-full border-2 border-[#877067] text-white
+                         bg-gradient-to-r from-[#877067]/10 to-transparent
+                         hover:from-[#877067]/30 hover:to-[#877067]/10
+                         transition-all duration-300
+                         [box-shadow:_0_0_20px_rgba(135,112,103,0.3)]
+                         hover:[box-shadow:_0_0_30px_rgba(135,112,103,0.5)]
+                         backdrop-blur-sm"
               >
                 View Projects
               </Link>
               <Link
                 href="/resume.pdf"
-                className="px-8 py-3 rounded-full border-2 border-blue-300 text-white
-                         bg-transparent hover:bg-blue-300/20 transition-all duration-300
-                         [box-shadow:_0_0_20px_rgb(0_0_255_/_0.2)]
-                         hover:[box-shadow:_0_0_30px_rgb(0_0_255_/_0.4)]"
+                className="px-8 py-3 rounded-full border-2 border-[#877067]/80 text-white
+                         bg-gradient-to-r from-[#877067]/5 to-transparent
+                         hover:from-[#877067]/20 hover:to-[#877067]/5
+                         transition-all duration-300
+                         [box-shadow:_0_0_20px_rgba(135,112,103,0.2)]
+                         hover:[box-shadow:_0_0_30px_rgba(135,112,103,0.4)]
+                         backdrop-blur-sm"
               >
                 Download Resume
               </Link>
