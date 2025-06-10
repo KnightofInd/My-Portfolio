@@ -26,7 +26,7 @@ const AboutMe = () => {
               With a background in both data science and automotive engineering, I bridge the gap between cutting-edge AI technologies and practical automotive applications.
             </p>
             <p className="text-lg transition-all duration-300 hover:-translate-y-1 hover:text-white">
-              My journey involves transforming complex data into actionable insights, developing innovative solutions, and pushing the boundaries of what's possible in automotive intelligence.
+              My journey involves transforming complex data into actionable insights, developing innovative solutions, and pushing the boundaries of what&#39;s possible in automotive intelligence.
             </p>
           </div>
 
