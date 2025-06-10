@@ -78,63 +78,43 @@ const Gallery = () => {
   const photos = [
     {
       id: 1,
-      src: '/gallery/photo1.jpg',
-      title: 'AI Project',
-      description: 'Deep learning model visualization'
+      src: '/gallery/photo1.jpg'
     },
     {
       id: 2,
-      src: '/gallery/photo2.jpg',
-      title: 'Data Analysis',
-      description: 'Automotive data insights'
+      src: '/gallery/photo2.jpg'
     },
     {
       id: 3,
-      src: '/gallery/photo3.jpg',
-      title: 'Machine Learning',
-      description: 'Pattern recognition system'
+      src: '/gallery/photo3.jpg'
     },
     {
       id: 4,
-      src: '/gallery/photo4.jpg',
-      title: 'Research Work',
-      description: 'Experimental results'
+      src: '/gallery/photo4.jpg'
     },
     {
       id: 5,
-      src: '/gallery/photo5.jpg',
-      title: 'Automation',
-      description: 'Process automation dashboard'
+      src: '/gallery/photo5.jpg'
     },
     {
       id: 6,
-      src: '/gallery/photo6.jpg',
-      title: 'Innovation',
-      description: 'Next-gen technology demo'
+      src: '/gallery/photo6.jpg'
     },
     {
       id: 7,
-      src: '/gallery/photo7.jpg',
-      title: 'AI Analytics',
-      description: 'Predictive modeling systems'
+      src: '/gallery/photo7.jpg'
     },
     {
       id: 8,
-      src: '/gallery/photo8.jpg',
-      title: 'Data Science',
-      description: 'Statistical analysis workflow'
+      src: '/gallery/photo8.jpg'
     },
     {
       id: 9,
-      src: '/gallery/photo9.jpg',
-      title: 'Automation',
-      description: 'Robotic process automation'
+      src: '/gallery/photo9.jpg'
     },
     {
       id: 10,
-      src: '/gallery/photo10.jpg',
-      title: 'Research',
-      description: 'Advanced analytics dashboard'
+      src: '/gallery/photo10.jpg'
     }
   ];
 
@@ -162,13 +142,12 @@ const Gallery = () => {
                 className={`flex-none w-[500px] transition-all duration-500
                           ${currentImageIndex === index ? 'scale-105 z-10' : 'scale-95'}`}
                 style={{ opacity: Math.max(0.4, 1 - Math.abs(currentImageIndex - index) * 0.25) }}
-              >
-                <div className="relative h-[600px] rounded-xl overflow-hidden
+              >                <div className="relative h-[600px] rounded-xl overflow-hidden
                               group transform transition-all duration-300 hover:scale-105
                               shadow-[0_0_30px_rgba(135,112,103,0.2)]">
                   <Image
                     src={photo.src}
-                    alt={photo.title}
+                    alt="Gallery Image"
                     fill
                     className="object-cover"
                   />
@@ -176,20 +155,6 @@ const Gallery = () => {
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent
                                 opacity-60 group-hover:opacity-80 transition-opacity duration-300"/>
-                  
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2
-                                group-hover:translate-y-0 transition-transform duration-300
-                                bg-gradient-to-t from-black/90 to-transparent">
-                    <h3 className="text-2xl font-bold text-white mb-3 
-                                font-orbitron group-hover:text-[#877067]">
-                      {photo.title}
-                    </h3>
-                    <p className="text-gray-300 text-base opacity-0 group-hover:opacity-100
-                               transition-opacity duration-300">
-                      {photo.description}
-                    </p>
-                  </div>
                 </div>
               </div>
             ))}
