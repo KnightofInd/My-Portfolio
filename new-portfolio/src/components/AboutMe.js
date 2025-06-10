@@ -20,7 +20,7 @@ const AboutMe = () => {
           {/* Text Content with hover effects */}
           <div className="space-y-6 text-gray-300 font-space-grotesk">
             <p className="text-lg transition-all duration-300 hover:-translate-y-1 hover:text-white">
-              I'm a passionate Data Scientist and Automotive enthusiast with a unique blend of AI expertise and engineering intuition.
+              I&#39;m a passionate Data Scientist and Automotive enthusiast with a unique blend of AI expertise and engineering intuition.
             </p>
             <p className="text-lg transition-all duration-300 hover:-translate-y-1 hover:text-white">
               With a background in both data science and automotive engineering, I bridge the gap between cutting-edge AI technologies and practical automotive applications.
