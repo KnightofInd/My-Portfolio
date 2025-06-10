@@ -45,9 +45,8 @@ const HeroSection = () => {
           <div className="max-w-2xl mx-auto lg:mr-0 p-6 rounded-xl backdrop-blur-md bg-black/20"> {/* Added container with increased transparency */}
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6
                        [text-shadow:_0_0_30px_rgba(135,112,103,0.3)]"> {/* Reduced glow intensity */}
-              From Neural Nets to Engine Sets —
-              <br />
-              I Engineer Intelligence
+              Hi I am Rohan
+            
             </h1>
             
             <div className="text-xl md:text-2xl text-[#e2d5d1] font-space-grotesk mb-8">

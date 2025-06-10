@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-white">
-            DataAnalyst<span className="text-[#877067]">.Portfolio</span>
+            rohans<span className="text-[#877067]">.tech</span>
           </Link>
           
           <div className="hidden md:flex space-x-8">
