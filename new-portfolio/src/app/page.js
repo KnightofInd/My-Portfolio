@@ -2,14 +2,17 @@ import HeroSection from "@/components/HeroSection";
 import AboutMe from "@/components/AboutMe";
 import TechnicalSkills from "@/components/TechnicalSkills";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto">
       <HeroSection />
-      <AboutMe />
+      <AboutMe />\
+      <Gallery />
       <TechnicalSkills />
       <FeaturedProjects />
+      
     </div>
   );
 }
