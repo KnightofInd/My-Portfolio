@@ -12,8 +12,7 @@ export default function Home() {
       <AboutMe />\
       <Gallery />
       <Achievements />
-      <TechnicalSkills />
-      <FeaturedProjects />
+     
       
     </div>
   );

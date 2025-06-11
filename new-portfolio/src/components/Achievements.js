@@ -6,35 +6,35 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
-      title: "Microsoft Azure Hackathon Winner",
-      event: "AI Innovation Challenge 2024",
-      description: "First place in developing an AI-powered automotive diagnostic system",
-      date: "March 2024",
+      title: "SAMHITA'25",
+      event: "National Level Multi Domain Hackathon",
+      description: "First place in developing an AI-powered automotive diagnostic syste",
+      date: "May 2025",
       badge: "🏆 1st Place"
     },
     {
       id: 2,
-      title: "Data Science Hackathon Finalist",
-      event: "Global Data Challenge",
-      description: "Developed predictive analytics solution for autonomous vehicles",
-      date: "January 2024",
-      badge: "🌟 Finalist"
+      title: "Hack-O-Holics",
+      event: "National Level Multi Domain Hackathon",
+      description: "Developed predictive analytics solution for Disaster Management",
+      date: "Sept 2024",
+      badge: "🏆 1st Place"
     },
     {
       id: 3,
-      title: "AI/ML Hackathon Winner",
+      title: "HackForge",
       event: "TechFest 2023",
-      description: "Created innovative machine learning solution for vehicle performance optimization",
+      description: "Created innovative machine learning solution for teaching assistance",
       date: "November 2023",
-      badge: "🏆 Winner"
+      badge: "Finalist"
     },
     {
       id: 4,
-      title: "Automotive Tech Hackathon",
+      title: "Web Wonder ",
       event: "AutoTech Summit",
       description: "Developed real-time vehicle diagnostics using IoT sensors",
       date: "September 2023",
-      badge: "🎯 Top 5"
+      badge: "🎯 Runner Up"
     }
   ];
 
