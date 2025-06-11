@@ -3,6 +3,7 @@ import AboutMe from "@/components/AboutMe";
 import TechnicalSkills from "@/components/TechnicalSkills";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Gallery from "@/components/Gallery";
+import Achievements from "@/components/Achievements";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutMe />\
       <Gallery />
+      <Achievements />
       <TechnicalSkills />
       <FeaturedProjects />
       
