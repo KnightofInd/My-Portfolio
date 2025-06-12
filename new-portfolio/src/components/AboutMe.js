@@ -21,9 +21,9 @@ const AboutMe = () => {
           <div className="space-y-8 text-gray-200 font-space-grotesk"> {/* Brightened base text */}
             <p className="text-lg leading-relaxed transition-all duration-300 
                        hover:-translate-y-1 hover:text-white group">
-              Hey there! I'm <span className="text-[#b39c94] font-semibold 
+              Hey there! I&apos;m <span className="text-[#b39c94] font-semibold 
                                            group-hover:text-white group-hover:underline
-                                           transition-colors duration-300">Kn Sharma</span>, 
+                                           transition-colors duration-300">Rohan Sharma</span>, 
               a Computer Science enthusiast with a flair for blending tech with real-world impact. 
               From full-stack web apps to AI-driven solutions, I thrive on solving meaningful problems — 
               and <span className="italic text-[#b39c94] group-hover:text-white">hackathons are my playground</span>.
@@ -33,10 +33,10 @@ const AboutMe = () => {
                        hover:-translate-y-1 hover:text-white group">
               <span className="text-transparent bg-clip-text bg-gradient-to-r 
                             from-[#b39c94] to-white group-hover:from-white group-hover:to-[#b39c94]
-                            transition-all duration-500">💡</span> Whether it's optimizing disaster response, 
+                            transition-all duration-500">💡</span> Whether its optimizing disaster response, 
               predicting pandemics, or decoding social media trends, I love turning complex ideas into 
               intuitive, scalable systems. My journey has taken me from data pipelines to deploying 
-              intelligent UIs — and I'm just getting started.
+              intelligent UIs — and I&apos;m just getting started.
             </p>
 
             {/* Enhanced Skills Section */}
@@ -64,9 +64,9 @@ const AboutMe = () => {
                        hover:-translate-y-1 hover:text-white
                        p-6 rounded-xl backdrop-blur-md bg-[#b39c94]/10
                        border border-[#b39c94]/20">
-              <span className="text-[#b39c94]">🎯</span> "Beyond the screen, I channel my passion into 
-              leading tech clubs and organizing campus hackathons — turning curiosity into community, 
-              and ideas into impact."
+              <span className="text-[#b39c94]">🎯</span> &quot;Beyond the screen, I channel my passion into 
+              leading tech clubs and organizing campus hackathons &mdash; turning curiosity into community, 
+              and ideas into impact.&quot;
             </p>
           </div>
 
