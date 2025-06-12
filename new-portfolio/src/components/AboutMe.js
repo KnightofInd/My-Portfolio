@@ -55,7 +55,7 @@ const AboutMe = () => {
                        bg-gradient-to-r from-[#b39c94]/5 to-transparent
                        hover:from-[#b39c94]/10 hover:to-[#b39c94]/5
                        transition-all duration-500 hover:-translate-y-1">
-              Hey there! I'm <span className="text-[#b39c94] font-semibold 
+              Hey there! I&apos;m <span className="text-[#b39c94] font-semibold 
                                            relative inline-block
                                            after:absolute after:w-full after:h-0.5
                                            after:bg-[#b39c94] after:bottom-0 after:left-0
@@ -77,7 +77,7 @@ const AboutMe = () => {
                        bg-gradient-to-l from-[#b39c94]/5 to-transparent
                        hover:from-[#b39c94]/10 hover:to-[#b39c94]/5
                        transition-all duration-500 hover:-translate-y-1">
-              <span className="inline-block animate-bounce-slow">💡</span> Whether it's optimizing 
+              <span className="inline-block animate-bounce-slow">💡</span> Whether it&apos;s optimizing 
               <span className="relative inline-block group mx-2">
                 disaster response
                 <span className="absolute bottom-0 left-0 w-full h-px bg-[#b39c94]
@@ -96,9 +96,9 @@ const AboutMe = () => {
                        border border-[#b39c94]/20 hover:border-[#b39c94]/30
                        shadow-[0_0_30px_rgba(179,156,148,0.1)]
                        hover:shadow-[0_0_50px_rgba(179,156,148,0.2)]">
-              <span className="inline-block animate-pulse">🎯</span> "Beyond the screen, I channel my passion into 
+              <span className="inline-block animate-pulse">🎯</span> &quot;Beyond the screen, I channel my passion into 
               leading tech clubs and organizing campus hackathons — turning curiosity into community, 
-              and ideas into impact."
+              and ideas into impact.&quot;
             </p>
           </div>
 
