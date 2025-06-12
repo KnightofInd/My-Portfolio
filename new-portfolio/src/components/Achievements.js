@@ -22,7 +22,7 @@ const Achievements = () => {
     },
     {
       id: 3,
-      title: "HackForge",
+      title: "Texus'24 Code-Web",
       event: "TechFest 2023",
       description: "Created innovative machine learning solution for teaching assistance",
       date: "November 2023",
@@ -30,10 +30,10 @@ const Achievements = () => {
     },
     {
       id: 4,
-      title: "Web Wonder ",
-      event: "AutoTech Summit",
+      title: "Exaverse Web Wonder ",
+      event: "National Level Tech Symposium",
       description: "Developed real-time vehicle diagnostics using IoT sensors",
-      date: "September 2023",
+      date: "August 2024",
       badge: "🎯 Runner Up"
     }
   ];

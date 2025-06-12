@@ -10,27 +10,67 @@ const AboutMe = () => {
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-12">
-          {/* Title with simple fade */}
+          {/* Title with glow effect */}
           <h2 className="text-4xl lg:text-5xl font-bold text-white font-orbitron
                       [text-shadow:_0_0_30px_rgba(135,112,103,0.3)]
                       transition-all duration-700 hover:scale-105">
             About Me
           </h2>
           
-          {/* Text Content with hover effects */}
-          <div className="space-y-6 text-gray-300 font-space-grotesk">
-            <p className="text-lg transition-all duration-300 hover:-translate-y-1 hover:text-white">
-              I&#39;m a passionate Data Scientist and Automotive enthusiast with a unique blend of AI expertise and engineering intuition.
+          {/* Introduction with highlight effect */}
+          <div className="space-y-8 text-gray-200 font-space-grotesk"> {/* Brightened base text */}
+            <p className="text-lg leading-relaxed transition-all duration-300 
+                       hover:-translate-y-1 hover:text-white group">
+              Hey there! I'm <span className="text-[#b39c94] font-semibold 
+                                           group-hover:text-white group-hover:underline
+                                           transition-colors duration-300">Kn Sharma</span>, 
+              a Computer Science enthusiast with a flair for blending tech with real-world impact. 
+              From full-stack web apps to AI-driven solutions, I thrive on solving meaningful problems — 
+              and <span className="italic text-[#b39c94] group-hover:text-white">hackathons are my playground</span>.
             </p>
-            <p className="text-lg transition-all duration-300 hover:-translate-y-1 hover:text-white">
-              With a background in both data science and automotive engineering, I bridge the gap between cutting-edge AI technologies and practical automotive applications.
+
+            <p className="text-lg leading-relaxed transition-all duration-300 
+                       hover:-translate-y-1 hover:text-white group">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r 
+                            from-[#b39c94] to-white group-hover:from-white group-hover:to-[#b39c94]
+                            transition-all duration-500">💡</span> Whether it's optimizing disaster response, 
+              predicting pandemics, or decoding social media trends, I love turning complex ideas into 
+              intuitive, scalable systems. My journey has taken me from data pipelines to deploying 
+              intelligent UIs — and I'm just getting started.
             </p>
-            <p className="text-lg transition-all duration-300 hover:-translate-y-1 hover:text-white">
-              My journey involves transforming complex data into actionable insights, developing innovative solutions, and pushing the boundaries of what&#39;s possible in automotive intelligence.
+
+            {/* Enhanced Skills Section */}
+            <div className="space-y-4 p-6 rounded-xl backdrop-blur-md bg-[#b39c94]/10
+                         hover:bg-[#b39c94]/15 transition-all duration-300
+                         border border-[#b39c94]/20">
+              <p className="text-xl font-semibold text-[#b39c94] mb-4">🛠️ I specialize in:</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {['MERN Stack', 'Python', 'Flask', 'React', 'AI/ML', 'OCR/NLP', 'Data Visualization']
+                  .map((skill, index) => (
+                    <span key={index} 
+                          className="px-6 py-2.5 rounded-full text-base bg-gradient-to-r 
+                                   from-[#b39c94]/10 to-[#b39c94]/20 text-white
+                                   hover:from-[#b39c94]/20 hover:to-[#b39c94]/30 
+                                   hover:scale-105 hover:shadow-[0_0_20px_rgba(179,156,148,0.4)]
+                                   transition-all duration-300 border border-[#b39c94]/30
+                                   backdrop-blur-lg transform hover:-translate-y-0.5">
+                      {skill}
+                    </span>
+                  ))}
+              </div>
+            </div>
+
+            <p className="text-lg italic leading-relaxed transition-all duration-300 
+                       hover:-translate-y-1 hover:text-white
+                       p-6 rounded-xl backdrop-blur-md bg-[#b39c94]/10
+                       border border-[#b39c94]/20">
+              <span className="text-[#b39c94]">🎯</span> "Beyond the screen, I channel my passion into 
+              leading tech clubs and organizing campus hackathons — turning curiosity into community, 
+              and ideas into impact."
             </p>
           </div>
 
-          {/* Stats Grid with hover animations */}
+          {/* Stats Grid remains the same */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="group p-6 rounded-xl backdrop-blur-sm bg-[#877067]/10
                           transition-all duration-500 hover:bg-[#877067]/20
