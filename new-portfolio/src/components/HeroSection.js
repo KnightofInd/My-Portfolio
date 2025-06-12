@@ -2,8 +2,60 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from 'react';
 
 const HeroSection = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [isTyping, setIsTyping] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const texts = [
+    'Data Scientist',
+    'AI/ML Engineer',
+    'Full Stack Developer'
+  ];
+
+  useEffect(() => {
+    const currentText = texts[currentIndex];
+    let timeout;
+
+    const updateText = () => {
+      // Paused state - wait before starting deletion
+      if (isPaused) {
+        timeout = setTimeout(() => {
+          setIsPaused(false);
+          setIsTyping(false);
+        }, 200);
+        return;
+      }
+
+      if (isTyping) {
+        // Typing forward
+        if (displayText === currentText) {
+          setIsPaused(true);
+          return;
+        }
+        setDisplayText(currentText.substring(0, displayText.length + 1));
+      } else {
+        // Deleting
+        if (displayText === '') {
+          setIsTyping(true);
+          setCurrentIndex((prev) => (prev + 1) % texts.length);
+          return;
+        }
+        setDisplayText(displayText.substring(0, displayText.length - 1));
+      }
+
+      // Set next timeout with different speeds for typing and deleting
+      timeout = setTimeout(updateText, isTyping ? 150 : 75);
+    };
+
+    timeout = setTimeout(updateText, isTyping ? 150 : 75);
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isTyping, currentIndex, isPaused]);
+
   return (
     <section className="relative h-[calc(100vh-4rem)] overflow-hidden bg-black">
       {/* Background Image */}
@@ -65,12 +117,21 @@ const HeroSection = () => {
               Hi I am Rohan
             </h1>
             
-            <div className="text-lg md:text-xl lg:text-2xl text-[#e2d5d1] font-space-grotesk mb-6 lg:mb-8">
-              <span className="typing-text border-[#877067]/70">
-                Data Scientist
-              </span>
-              <p className="mt-3 lg:mt-4 opacity-95">
-                Bridging the gap between AI innovation and automotive excellence
+            <div className="text-xl md:text-2xl lg:text-4xl text-[#e2d5d1] font-space-grotesk mb-6 lg:mb-8">
+              <div className="inline-flex items-center">
+                <span className="inline-block min-w-[2ch] transition-all duration-75 
+                         font-bold bg-gradient-to-r from-white to-[#e2d5d1] 
+                         bg-clip-text text-transparent">
+                  {displayText}
+                </span>
+                <span 
+                  className={`w-0.5 h-[1.2em] bg-[#877067] ml-1 ${
+                    isPaused ? 'animate-blink' : 'opacity-100'
+                  }`}
+                ></span>
+              </div>
+              <p className="mt-3 lg:mt-4 opacity-95 text-base md:text-lg lg:text-xl font-normal">
+                Think. Create. Evolve. Crafting solutions with purpose.
               </p>
             </div>
 

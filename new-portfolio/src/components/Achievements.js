@@ -23,7 +23,7 @@ const Achievements = () => {
     {
       id: 3,
       title: "Texus'24 Code-Web",
-      event: "TechFest 2023",
+      event: "TechFest 2024",
       description: "Created innovative machine learning solution for teaching assistance",
       date: "November 2023",
       badge: "Finalist"
