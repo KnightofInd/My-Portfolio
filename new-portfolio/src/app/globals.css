@@ -264,3 +264,22 @@ body {
   animation: blink 1s step-end infinite;
 }
 
+/* Social Button Neomorphic Style */
+.social-btn {
+  @apply relative flex items-center justify-center w-14 h-14
+         rounded-xl text-gray-300
+         bg-gradient-to-br from-black to-gray-900
+         shadow-[5px_5px_10px_rgba(0,0,0,0.6),-5px_-5px_10px_rgba(255,255,255,0.08)]
+         transition-all duration-300 ease-out
+         hover:scale-95 hover:text-[#e2d5d1]
+         before:absolute before:inset-0
+         before:rounded-xl before:opacity-0
+         before:transition-opacity before:duration-300
+         before:shadow-[0_0_25px_rgba(226,213,209,0.4)]
+         hover:before:opacity-100;
+}
+
+.social-btn:active {
+  @apply shadow-[2px_2px_5px_rgba(0,0,0,0.6),-2px_-2px_5px_rgba(255,255,255,0.08)]
+         scale-90;
+}
