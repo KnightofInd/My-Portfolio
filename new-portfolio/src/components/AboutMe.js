@@ -109,23 +109,7 @@ const AboutMe = () => {
                           hover:-translate-y-2">
               <div className="text-4xl font-bold text-white mb-2 
                           transition-transform duration-500 group-hover:scale-110">5+</div>
-              <div className="text-sm text-gray-400 group-hover:text-white">Years Experience</div>
-            </div>
-            
-            <div className="group p-6 rounded-xl backdrop-blur-sm bg-[#877067]/10
-                          transition-all duration-500 hover:bg-[#877067]/20
-                          hover:-translate-y-2">
-              <div className="text-4xl font-bold text-white mb-2 
-                          transition-transform duration-500 group-hover:scale-110">50+</div>
-              <div className="text-sm text-gray-400 group-hover:text-white">Projects Completed</div>
-            </div>
-            
-            <div className="group p-6 rounded-xl backdrop-blur-sm bg-[#877067]/10
-                          transition-all duration-500 hover:bg-[#877067]/20
-                          hover:-translate-y-2">
-              <div className="text-4xl font-bold text-white mb-2 
-                          transition-transform duration-500 group-hover:scale-110">30+</div>
-              <div className="text-sm text-gray-400 group-hover:text-white">Happy Clients</div>
+              <div className="text-sm text-gray-400 group-hover:text-white">Hackathon Wins</div>
             </div>
             
             <div className="group p-6 rounded-xl backdrop-blur-sm bg-[#877067]/10
@@ -133,8 +117,24 @@ const AboutMe = () => {
                           hover:-translate-y-2">
               <div className="text-4xl font-bold text-white mb-2 
                           transition-transform duration-500 group-hover:scale-110">15+</div>
+              <div className="text-sm text-gray-400 group-hover:text-white">Projects Completed</div>
+            </div>
+            
+            <div className="group p-6 rounded-xl backdrop-blur-sm bg-[#877067]/10
+                          transition-all duration-500 hover:bg-[#877067]/20
+                          hover:-translate-y-2">
+              <div className="text-4xl font-bold text-white mb-2 
+                          transition-transform duration-500 group-hover:scale-110">20+</div>
               <div className="text-sm text-gray-400 group-hover:text-white">Technologies</div>
             </div>
+            
+           {/*  <div className="group p-6 rounded-xl backdrop-blur-sm bg-[#877067]/10
+                          transition-all duration-500 hover:bg-[#877067]/20
+                          hover:-translate-y-2">
+              <div className="text-4xl font-bold text-white mb-2 
+                          transition-transform duration-500 group-hover:scale-110">15+</div>
+              <div className="text-sm text-gray-400 group-hover:text-white">Technologies</div>
+            </div> */}
           </div>
         </div>
       </div>
