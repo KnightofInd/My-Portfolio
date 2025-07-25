@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="flex items-center space-x-8">
             {/* LinkedIn */}
             <Link 
-              href="https://linkedin.com/in/your-profile" 
+              href="https://linkedin.com/in/rohanstech/" 
               target="_blank"
               aria-label="LinkedIn Profile"
               className="social-btn group"

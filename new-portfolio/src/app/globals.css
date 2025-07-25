@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
+/* Fade-in animation for project cards */
+.fade-in-view {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
 
 :root {
   --background: #ffffff;
