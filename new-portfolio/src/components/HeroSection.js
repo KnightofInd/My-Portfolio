@@ -135,7 +135,7 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6">              
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6">              
               <Link 
                 href="#projects" 
                 className="px-6 sm:px-8 py-3 rounded-full border-2 border-[#877067]/70 text-white
@@ -147,7 +147,7 @@ const HeroSection = () => {
                        backdrop-blur-sm text-sm sm:text-base"
               >
                 View Projects
-              </Link>
+              </Link> 
               <Link 
                 href="/resume.pdf" 
                 className="px-6 sm:px-8 py-3 rounded-full border-2 border-[#877067]/60 text-white
@@ -160,7 +160,7 @@ const HeroSection = () => {
               >
                 Download Resume
               </Link>
-            </div> */}
+            </div> 
           </div>
         </div>
       </div>
