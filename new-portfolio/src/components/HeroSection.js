@@ -11,7 +11,7 @@ const HeroSection = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const texts = [
-    'Data Scientist',
+    'Data Engineer',
     'AI/ML Engineer',
     'Full Stack Developer'
   ];
