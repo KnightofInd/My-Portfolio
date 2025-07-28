@@ -13,10 +13,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Rohan's",
-  description: "A showcase of Rohan's work, skills, and achievements"
-};
 
 export default function RootLayout({ children }) {
   return (
