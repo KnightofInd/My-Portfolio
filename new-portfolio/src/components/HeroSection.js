@@ -137,7 +137,7 @@ const HeroSection = () => {
 
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6">              
               <Link 
-                href="#projects" 
+                href="projects" 
                 className="px-6 sm:px-8 py-3 rounded-full border-2 border-[#877067]/70 text-white
                        bg-gradient-to-r from-[#877067]/5 to-transparent
                        hover:from-[#877067]/20 hover:to-[#877067]/5

@@ -23,7 +23,7 @@ const Navbar = () => {
                 priority
               />
             </div>
-            <Link href="/" className="text-xl font-bold text-white">
+            <Link href="/" className="text-2xl font-bold text-white">
               rohans<span className="text-[#877067]">.tech</span>
             </Link>
           </div>
@@ -32,25 +32,25 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             <Link 
               href="/" 
-              className="text-gray-300 hover:text-[#877067] transition-colors duration-200"
+              className="text-gray-300 hover:text-[#877067] transition-colors duration-200 text-lg"
             >
               Home
             </Link>
             <Link 
               href="/projects" 
-              className="text-gray-300 hover:text-[#877067] transition-colors duration-200"
+              className="text-gray-300 hover:text-[#877067] transition-colors duration-200 text-lg"
             >
               Projects
             </Link>
             <Link 
               href="/skills" 
-              className="text-gray-300 hover:text-[#877067] transition-colors duration-200"
+              className="text-gray-300 hover:text-[#877067] transition-colors duration-200 text-lg"
             >
               Skills
             </Link>
             <Link 
               href="/contact" 
-              className="text-gray-300 hover:text-[#877067] transition-colors duration-200"
+              className="text-gray-300 hover:text-[#877067] transition-colors duration-200 text-lg"
             >
               Contact
             </Link>
@@ -86,15 +86,15 @@ const Navbar = () => {
                 />
               </div>
               <div>
-                <h3 className="text-white font-medium">Rohan</h3>
-                <p className="text-sm text-gray-400">Data Scientist</p>
+                <h3 className="text-white font-medium text-lg">Rohan</h3>
+                <p className="text-base text-gray-400">Data Scientist</p>
               </div>
             </div>
             
             <Link 
               href="/" 
               className="block text-gray-300 hover:text-[#877067] transition-all duration-200
-                       hover:translate-x-2"
+                       hover:translate-x-2 text-lg px-4"
               onClick={() => setIsOpen(false)}
             >
               Home
@@ -102,7 +102,7 @@ const Navbar = () => {
             <Link 
               href="/projects" 
               className="block text-gray-300 hover:text-[#877067] transition-all duration-200
-                       hover:translate-x-2"
+                       hover:translate-x-2 text-lg px-4"
               onClick={() => setIsOpen(false)}
             >
               Projects
@@ -110,7 +110,7 @@ const Navbar = () => {
             <Link 
               href="/skills" 
               className="block text-gray-300 hover:text-[#877067] transition-all duration-200
-                       hover:translate-x-2"
+                       hover:translate-x-2 text-lg px-4"
               onClick={() => setIsOpen(false)}
             >
               Skills
@@ -118,7 +118,7 @@ const Navbar = () => {
             <Link 
               href="/contact" 
               className="block text-gray-300 hover:text-[#877067] transition-all duration-200
-                       hover:translate-x-2"
+                       hover:translate-x-2 text-lg px-4"
               onClick={() => setIsOpen(false)}
             >
               Contact
