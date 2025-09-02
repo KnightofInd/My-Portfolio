@@ -82,10 +82,10 @@ const Contact = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-            Let's <span className="text-[#826c63]">Connect</span>
+            Let&apos;s <span className="text-[#826c63]">Connect</span>
           </h2>
           <p className="text-xl text-gray-300 leading-relaxed">
-            Ready to collaborate or discuss opportunities? Let's start a conversation.
+            Ready to collaborate or discuss opportunities? Let&apos;s start a conversation.
           </p>
         </div>
 
