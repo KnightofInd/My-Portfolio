@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutMe from "@/components/AboutMe";
 import Gallery from "@/components/Gallery";
 import Achievements from "@/components/Achievements";
+import Contact from "@/components/Contact";
 
 export const metadata = {
   title: "Rohan Sharma | Portfolio",
@@ -40,6 +41,7 @@ export default function Home() {
       <AboutMe />
       <Gallery />
       <Achievements />
+      <Contact />
     </div>
   );
 }

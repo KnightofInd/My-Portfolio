@@ -48,12 +48,20 @@ const Navbar = () => {
             >
               Skills
             </Link>
-            <Link 
-              href="/contact" 
+            <button 
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  // If not on home page, navigate to home then scroll
+                  window.location.href = '/#contact';
+                }
+              }}
               className="text-gray-300 hover:text-[#877067] transition-colors duration-200 text-lg"
             >
               Contact
-            </Link>
+            </button>
           </div>
 
           {/* Hamburger Button */}
@@ -115,14 +123,21 @@ const Navbar = () => {
             >
               Skills
             </Link>
-            <Link 
-              href="/contact" 
+            <button 
+              onClick={() => {
+                setIsOpen(false);
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/#contact';
+                }
+              }}
               className="block text-gray-300 hover:text-[#877067] transition-all duration-200
-                       hover:translate-x-2 text-lg px-4"
-              onClick={() => setIsOpen(false)}
+                       hover:translate-x-2 text-lg px-4 text-left w-full"
             >
               Contact
-            </Link>
+            </button>
           </div>
         </div>
       </div>
