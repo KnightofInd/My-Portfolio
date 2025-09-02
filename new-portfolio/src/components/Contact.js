@@ -209,18 +209,26 @@ const Contact = () => {
 
       {/* Background particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-[#826c63]/30 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-              animationDuration: `${2 + Math.random() * 2}s`
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => {
+          // Use deterministic values based on index to avoid hydration errors
+          const leftPercent = ((i * 17) % 100);
+          const topPercent = ((i * 23) % 100);
+          const delay = (i * 0.15) % 2;
+          const duration = 2 + ((i * 0.1) % 2);
+          
+          return (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-[#826c63]/30 rounded-full animate-pulse"
+              style={{
+                left: `${leftPercent}%`,
+                top: `${topPercent}%`,
+                animationDelay: `${delay}s`,
+                animationDuration: `${duration}s`
+              }}
+            />
+          );
+        })}
       </div>
     </section>
   );
