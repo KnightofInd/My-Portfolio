@@ -149,16 +149,20 @@ const HeroSection = () => {
                 View Projects
               </Link> 
               <Link 
-                href="/resume.pdf" 
-                className="px-6 sm:px-8 py-3 rounded-full border-2 border-[#877067]/60 text-white
-                       bg-gradient-to-r from-[#877067]/5 to-transparent
-                       hover:from-[#877067]/15 hover:to-[#877067]/5
+                href="/analyst" 
+                className="group px-6 sm:px-8 py-3 rounded-full border border-[#5eead4]/55 text-white
+                       bg-[linear-gradient(135deg,rgba(94,234,212,0.22),rgba(135,112,103,0.18))]
+                       hover:bg-[linear-gradient(135deg,rgba(94,234,212,0.3),rgba(135,112,103,0.26))]
                        transition-all duration-300
-                       shadow-[0_0_20px_rgba(135,112,103,0.15)]
-                       hover:shadow-[0_0_30px_rgba(135,112,103,0.3)]
-                       backdrop-blur-sm text-sm sm:text-base"
+                       shadow-[0_0_24px_rgba(94,234,212,0.18)]
+                       hover:shadow-[0_0_36px_rgba(94,234,212,0.32)]
+                       backdrop-blur-sm text-sm sm:text-base font-semibold
+                       hover:-translate-y-0.5"
               >
-                Download Resume
+                <span className="inline-flex items-center gap-2">
+                  Analyst Space
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                </span>
               </Link>
             </div> 
           </div>

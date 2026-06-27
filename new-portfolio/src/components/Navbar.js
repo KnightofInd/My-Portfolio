@@ -24,7 +24,7 @@ const Navbar = () => {
               />
             </div>
             <Link href="/" className="text-2xl font-bold text-white">
-              rohans<span className="text-[#877067]">.tech</span>
+              rohansharma<span className="text-[#877067]">.me</span>
             </Link>
           </div>
           
@@ -47,6 +47,12 @@ const Navbar = () => {
               className="text-gray-300 hover:text-[#877067] transition-colors duration-200 text-lg"
             >
               Skills
+            </Link>
+            <Link 
+              href="/analyst" 
+              className="text-gray-300 hover:text-[#5eead4] transition-colors duration-200 text-lg"
+            >
+              Analyst Space
             </Link>
             <button 
               onClick={() => {
@@ -122,6 +128,14 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Skills
+            </Link>
+            <Link 
+              href="/analyst" 
+              className="block text-gray-300 hover:text-[#5eead4] transition-all duration-200
+                       hover:translate-x-2 text-lg px-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Analyst Space
             </Link>
             <button 
               onClick={() => {
