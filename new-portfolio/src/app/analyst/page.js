@@ -26,7 +26,7 @@ export const metadata = {
     title: "Analyst | Rohan Sharma Portfolio",
     description:
       "Decision-focused analytics, business intelligence, dashboards, and data storytelling by Rohan Sharma.",
-    url: "https://your-portfolio-domain.com/analyst",
+    url: "https://rohansharma.me/analyst",
     siteName: "Rohan Sharma Portfolio",
     images: [
       {
@@ -128,7 +128,7 @@ export default function AnalystPage() {
           <div>
 
             <h1 className="font-orbitron text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-              Analyst work built for decisions, not just dashboards.
+              Every Data tells a story.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
@@ -157,9 +157,7 @@ export default function AnalystPage() {
               Analyst Strengths
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-300">
-              The page is shaped around the practical analyst workflow:
-              define the question, prepare the data, surface the signal, and
-              present the next action clearly.
+              Powers given more by curiosity and less by academics.
             </p>
           </div>
 
